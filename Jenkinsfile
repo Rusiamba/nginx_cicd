@@ -10,7 +10,7 @@ pipeline {
     }
     stages {
       stage("Run Docker Compose") {
-        step {
+        steps {
           echo "====== run docker-compose ======"
           sh 'docker-compose up -d'
         }
