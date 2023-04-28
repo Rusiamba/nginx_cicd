@@ -8,6 +8,11 @@ pipeline {
     }
     stages {
       stage("Run Docker Compose") {
+        agent {
+          docker {
+            image 'nginx'
+          }  
+        }  
         steps {
           echo "====== run docker-compose ======"
           dir ('/nginx_cicd') {
