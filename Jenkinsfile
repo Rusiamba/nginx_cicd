@@ -14,8 +14,7 @@ pipeline {
           sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'sudo usermod -a -G docker jenkins' 
-          //sh 'docker run dockerfile -d -t .' 
+          sh 'docker run dockerfile -d -t -u root.' 
         }
       }
     }
