@@ -14,7 +14,9 @@ pipeline {
           sh 'pwd'
           //echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'docker run --name my-custom-nginx-container -d custom-nginx' 
+          sh 'sudo service docker restart'
+          sh 'service docker status'
+          //sh 'docker run --name my-custom-nginx-container -d custom-nginx' 
         }
       }
     }
