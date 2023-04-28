@@ -14,7 +14,7 @@ pipeline {
           sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'docker run --name dockerfile -v /some/content:/usr/share/nginx/html:ro -d nginx' 
+          sh 'docker run dockerfile -d -t .' 
         }
       }
     }
