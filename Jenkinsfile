@@ -9,10 +9,11 @@ pipeline {
     stages {
       stage("Run Docker Compose") {
         steps {
-          echo "====== run docker-compose ======"
-          dir ('/var/jenkins_home/workspace/nginx_cicd'){
-            sh 'docker-compose up -d'
-          }
+          git branch: 'main',
+          url: 'https://github.com/Rusiamba/nginx_cicd.git'
+          sh 'pwd'
+          //echo "====== run docker-compose ======"
+          
         }
       }
     }
