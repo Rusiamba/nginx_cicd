@@ -15,7 +15,7 @@ pipeline {
           //echo "====== run docker-compose ======"
           dir('nginx_cicd') {
             sh 'ls'
-            sh 'docker-compose up -d'
+            sh 'docker run --name my-custom-nginx-container -d custom-nginx'
           }
         }
       }
