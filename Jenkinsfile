@@ -14,7 +14,8 @@ pipeline {
           sh 'pwd'
           //echo "====== run docker-compose ======"
           dir('nginx_cicd@tmp') {
-            sh 'ls'  
+            sh 'ls'
+            sh 'docker-compose up -d'
           }
         }
       }
