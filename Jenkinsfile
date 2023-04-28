@@ -14,7 +14,7 @@ pipeline {
           sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'docker build -t .' 
+          sh 'docker build -t dockerfile .' 
         }
       }
     }
