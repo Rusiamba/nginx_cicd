@@ -15,6 +15,9 @@ pipeline {
           //echo "====== run docker-compose ======"
           dir('nginx_cicd') {
             sh 'ls'
+            sh 'sudo groupadd docker'
+            sh 'sudo usermod -aG docker jenkins'
+            sh 'newgrp docker'
             sh 'docker run --name my-custom-nginx-container -d custom-nginx'
           }
         }
