@@ -10,10 +10,8 @@ pipeline {
       stage("Run Docker Compose") {
         steps {
           echo "====== run docker-compose ======"
-          dir ('/nginx_cicd') {
-            sh 'sudo chown -R jenkins:jenkins jobs'
-            sh '/usr/bin/docker-compose up --build -d'   
-          }
+          sh 'sudo chown -R jenkins:jenkins jobs'
+          sh '/usr/bin/docker-compose up --build -d'
         }
       }
     }
