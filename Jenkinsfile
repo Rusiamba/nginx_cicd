@@ -10,7 +10,7 @@ pipeline {
       stage("Run Docker Compose") {
         steps {
           echo "====== run docker-compose ======"
-          sh '/nginx_cicd/docker-compose up --build -d'
+          sh 'docker-compose up --build -d'
         }
       }
     }
