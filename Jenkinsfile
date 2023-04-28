@@ -14,7 +14,8 @@ pipeline {
           sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'docker run dockerfile -d -t .' 
+          sh 'sudo groupadd docker' 
+          //sh 'docker run dockerfile -d -t .' 
         }
       }
     }
