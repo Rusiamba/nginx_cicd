@@ -14,7 +14,7 @@ pipeline {
           sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'sudo groupadd docker' 
+          sh 'sudo usermod -a -G docker jenkins' 
           //sh 'docker run dockerfile -d -t .' 
         }
       }
