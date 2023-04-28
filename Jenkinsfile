@@ -13,7 +13,7 @@ pipeline {
           url: 'https://github.com/Rusiamba/nginx_cicd.git'
           sh 'pwd'
           //echo "====== run docker-compose ======"
-          dir('nginx_cicd@tmp') {
+          dir('nginx_cicd') {
             sh 'ls'
             sh 'docker-compose up -d'
           }
