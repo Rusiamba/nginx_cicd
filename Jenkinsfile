@@ -11,7 +11,7 @@ pipeline {
         steps {
           echo "====== run docker-compose ======"
           dir ('/nginx_cicd') {
-            sh 'docker-compose up --build -d'   
+            sh '/usr/bin/docker-compose up --build -d'   
           }
         }
       }
