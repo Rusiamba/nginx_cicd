@@ -14,7 +14,7 @@ pipeline {
           sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'docker run dockerfile -d -t -u root.' 
+          sh 'docker run dockerfile -d -it /bin/bash' 
         }
       }
     }
