@@ -9,12 +9,8 @@ pipeline {
     stages {
       stage("Run Docker Compose") {
         steps {
-          git branch: 'main',
-          url: 'https://github.com/Rusiamba/nginx_cicd.git'
-          sh 'pwd'
           echo "====== run docker-compose ======"
           sh 'ls'
-          sh 'docker build -t dockerfile .' 
         }
       }
     }
